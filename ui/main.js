@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element = document.getElementById("main-text");
 element.innerHTML = "new value";
 //move the image when user click
-var element = document.getElementByID("madi");
+var img = document.getElementByID("madi");
 img.onclick = function() {
     img.style.marginleft = '100px';
 }
