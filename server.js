@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articalOne = {
-    title : 'Article one by Ganga Pathak',
+var articles  = {
+    'artical-one': {title : 'Article one by Ganga Pathak',
     heading: 'Article One',
     date: '08-08-2017',
     content:`
@@ -17,7 +17,33 @@ var articalOne = {
         </p>
         <p>
         We believe building technology can be both fun and empowering. We also think one can never be too young or too old to learn new things, and that applies to technology as well!
-        </p>`
+        </p>`},
+    'artical-two':{title : 'Article two by Ganga Pathak',
+    heading: 'Article two',
+    date: '09-08-2017',
+    content:`
+    <p>
+        THis a content of article two
+        </p>
+        <p>
+        If you just want to experience the joy of building an app, or have dreams of finding a job at one of the hottest tech companies or actually building one or just understand the app world that you cannot escape, you have come to the right place!
+        </p>
+        <p>
+        We believe building technology can be both fun and empowering. We also think one can never be too young or too old to learn new things, and that applies to technology as well!
+        </p>`},
+    'artical-three': {title : 'Article three by Ganga Pathak',
+    heading: 'Article three',
+    date: '10-08-2017',
+    content:`
+    <p>
+        This is a content of article three
+        </p>
+        <p>
+        If you just want to experience the joy of building an app, or have dreams of finding a job at one of the hottest tech companies or actually building one or just understand the app world that you cannot escape, you have come to the right place!
+        </p>
+        <p>
+        We believe building technology can be both fun and empowering. We also think one can never be too young or too old to learn new things, and that applies to technology as well!
+        </p>`},
 };
 function createTemplate(data){
     var title = data.title;
@@ -55,8 +81,11 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articalOne));
+app.get('/:articleName', function (req, res) {
+    //article objects =  article-one 
+    //articles[articleName] === content object for article one
+    var articleName = req.params.articlename;
+  res.send(createTemplate(articles[articleName]));
 });
 app.get('/article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
