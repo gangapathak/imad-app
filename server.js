@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles  = {
-    'artical-one': {title : 'Article one by Ganga Pathak',
+    'article-one': {
+    title : 'Article one by Ganga Pathak',
     heading: 'Article One',
     date: '08-08-2017',
     content:`
@@ -18,7 +19,8 @@ var articles  = {
         <p>
         We believe building technology can be both fun and empowering. We also think one can never be too young or too old to learn new things, and that applies to technology as well!
         </p>`},
-    'artical-two':{title : 'Article two by Ganga Pathak',
+    'article-two':{
+    title : 'Article two by Ganga Pathak',
     heading: 'Article two',
     date: '09-08-2017',
     content:`
@@ -31,7 +33,8 @@ var articles  = {
         <p>
         We believe building technology can be both fun and empowering. We also think one can never be too young or too old to learn new things, and that applies to technology as well!
         </p>`},
-    'artical-three': {title : 'Article three by Ganga Pathak',
+    'article-three': {
+    title : 'Article three by Ganga Pathak',
     heading: 'Article three',
     date: '10-08-2017',
     content:`
