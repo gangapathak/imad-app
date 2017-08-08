@@ -4,6 +4,11 @@ var element = document.getElementById("main-text");
 element.innerHTML = "new value";
 //move the image when user click
 var img = document.getElementByID('abc');
- img.onclick = function(){
-    image.style.marginLeft = '100px';
+ marginleft = 0;
+function moveRight() {
+    marginleft = marginleft + 10;
+    img.style.marginleft = marginleft + 'px';
+}
+img.onclick = function (){
+    var interval = setInterval(moveRight , 100);
 };
