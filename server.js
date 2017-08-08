@@ -43,7 +43,9 @@ htmlTemplate = `
         <div>
             ${date}
         </div>
+        <div>
         ${content}
+        </div>
         </div>
     </body>
 </html>
