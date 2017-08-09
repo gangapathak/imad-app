@@ -1,7 +1,7 @@
 console.log('Loaded!');
 //change content 
 var element = document.getElementById("main-text");
-element.innerHTML = "new value";
+element.innerHTML = "HI I am Madi";
 //move the image when user click
 var img = document.getElementById("abc");
  marginleft = 0;
