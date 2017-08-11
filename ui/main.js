@@ -8,7 +8,9 @@
 // img.onclick = function() {
   //  image.style.marginLeft = '100px';
 //};
+//counter code
 var button = document.getElementById('counter');
+//make a request to the counter Endpoint
 var counter = 0;
 button.onclick = function(){
     counter = counter + 1;
